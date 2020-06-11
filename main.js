@@ -4,6 +4,7 @@ const data = require('./src/data.json');
 const duplicate = [
   ['aa', 'bb'],
   ['bb', 'cc'],
+  ['aa', 'aa'],
 ];
 const main = function () {
   console.log(`1) bb to jj`, bfs(data, 'bb', 'jj'));
