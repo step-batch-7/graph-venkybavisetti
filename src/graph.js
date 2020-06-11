@@ -16,16 +16,7 @@ const addDestinationsInQueue = function (pairs, queue, visited, destination) {
   });
 };
 
-const checkSourceAndTarget = function (pairs, source, target) {
-  const result = pairs.some((transport) => {
-    return transport[1] === source;
-  });
-  return result;
-};
-
 const bfs = function (pairs, source, target) {
-  if (source === target && !checkSourceAndTarget(pairs, source, target))
-    return false;
   let queue = [];
   let visited = [];
   addDestinationsInQueue(pairs, queue, visited, source);
