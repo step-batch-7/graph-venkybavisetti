@@ -9,27 +9,6 @@ describe('bfs', function () {
   it('should return false when path not exists', function () {
     assert.isNotTrue(bfs(data, 'bb', 'jj'));
   });
-  it('should give false for same node not connected to itself', function () {
-    const pairs = [['a', 'b']];
-    assert.isFalse(bfs(pairs.slice(), 'a', 'a'));
-  });
-
-  it('should give true for same node connected to itself', function () {
-    const pairs = [
-      ['a', 'b'],
-      ['a', 'a'],
-    ];
-    assert.isTrue(bfs(pairs.slice(), 'a', 'a'));
-  });
-
-  it('should give false for non-adjacent and non-connected nodes in recursive graph', function () {
-    const pairs = [
-      ['a', 'b'],
-      ['b', 'c'],
-      ['b', 'd'],
-    ];
-    assert.isFalse(bfs(pairs.slice(), 'a', 'a'));
-  });
 
   it('should give true for non-adjacent and connected nodes in recursive graph', function () {
     const pairs = [
